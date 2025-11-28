@@ -43,7 +43,7 @@ public class ItemController {
         return resolveCacheHandler(cacheStrategy).readAllInfiniteScroll(lastItemId, pageSize);
     }
 
-    @GetMapping("/{cacheStrategy}/items/create")
+    @PostMapping("/{cacheStrategy}/items")
     public ItemResponse create(
             @PathVariable CacheStrategy cacheStrategy,
             @RequestBody ItemCreateRequest request

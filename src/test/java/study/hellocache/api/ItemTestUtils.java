@@ -35,9 +35,9 @@ public class ItemTestUtils {
                 .body(ItemPageResponse.class);
     }
 
-    static ItemResponse create(CacheStrategy cacheStrategy, Long itemId, ItemCreateRequest request) {
+    static ItemResponse create(CacheStrategy cacheStrategy, ItemCreateRequest request) {
         return restClient.post()
-                .uri("/cache-strategy/%s/items/%s".formatted(cacheStrategy.name(), itemId))
+                .uri("/cache-strategy/%s/items".formatted(cacheStrategy.name()))
                 .body(request)
                 .retrieve()
                 .body(ItemResponse.class);
