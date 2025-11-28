@@ -9,11 +9,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static study.hellocache.common.cache.CacheStrategy.*;
 
-class CustomCacheKeyGeneratorTest {
+class CacheKeyGeneratorTest {
 
     @Test
     void generateKey() throws NoSuchMethodException {
-        var keyGenerator = new CustomCacheKeyGenerator();
+        var keyGenerator = new CacheKeyGenerator();
         var cacheName = "users";
         var keySpel = "#userId + ':' + #type";
 

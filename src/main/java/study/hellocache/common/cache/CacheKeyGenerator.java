@@ -9,7 +9,7 @@ import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CustomCacheKeyGenerator {
+public class CacheKeyGenerator {
     private final ExpressionParser parser = new SpelExpressionParser();
 
     public String generateKey(JoinPoint joinpoint, CacheStrategy cacheStrategy, String cacheName, String keySpel) {
