@@ -13,21 +13,21 @@ public class NoneStrategyApiTest {
 
     @Test
     void createAndReadAndUpdateAndDelete(){
-        ItemResponse created = ItemTestUtils.create(CACHE_STRATEGY, new ItemCreateRequest("test1"));
+        ItemResponse created = ItemApiTestUtils.create(CACHE_STRATEGY, new ItemCreateRequest("test1"));
         System.out.println("created = " + created);
 
-        ItemResponse read1 = ItemTestUtils.read(CACHE_STRATEGY, created.itemId());
+        ItemResponse read1 = ItemApiTestUtils.read(CACHE_STRATEGY, created.itemId());
         System.out.println("read1 = " + read1);
 
-        ItemResponse updated = ItemTestUtils.update(CACHE_STRATEGY, read1.itemId(), new ItemUpdateRequest("updated test1"));
+        ItemResponse updated = ItemApiTestUtils.update(CACHE_STRATEGY, read1.itemId(), new ItemUpdateRequest("updated test1"));
         System.out.println("updated = " + updated);
 
-        ItemResponse read2 = ItemTestUtils.read(CACHE_STRATEGY, read1.itemId());
+        ItemResponse read2 = ItemApiTestUtils.read(CACHE_STRATEGY, read1.itemId());
         System.out.println("read2 = " + read2);
 
-        ItemTestUtils.delete(CACHE_STRATEGY, read2.itemId());
+        ItemApiTestUtils.delete(CACHE_STRATEGY, read2.itemId());
 
-        ItemResponse read3 = ItemTestUtils.read(CACHE_STRATEGY, read1.itemId());
+        ItemResponse read3 = ItemApiTestUtils.read(CACHE_STRATEGY, read1.itemId());
         System.out.println("read3 = " + read3);
     }
 }

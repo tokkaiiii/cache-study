@@ -7,7 +7,7 @@ import study.hellocache.model.ItemUpdateRequest;
 import study.hellocache.service.response.ItemPageResponse;
 import study.hellocache.service.response.ItemResponse;
 
-public class ItemTestUtils {
+public class ItemApiTestUtils {
     static RestClient restClient = RestClient.create("http://localhost:8080");
 
     static ItemResponse read(CacheStrategy cacheStrategy, Long itemId) {

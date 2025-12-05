@@ -6,6 +6,6 @@ class BitTest {
 
     @Test
     void bitTest() {
-        System.out.println(1L << 4);
+        System.out.println(1L << 7);
     }
 }

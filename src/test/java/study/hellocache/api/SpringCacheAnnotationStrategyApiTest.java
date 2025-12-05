@@ -12,12 +12,12 @@ public class SpringCacheAnnotationStrategyApiTest {
 
     @Test
     void createAndReadAndUpdateAndDelete(){
-        ItemResponse item1 = ItemTestUtils.create(CACHE_STRATEGY, new ItemCreateRequest("test1"));
-        ItemResponse item2 = ItemTestUtils.create(CACHE_STRATEGY, new ItemCreateRequest("test2"));
-        ItemResponse item3 = ItemTestUtils.create(CACHE_STRATEGY, new ItemCreateRequest("test3"));
+        ItemResponse item1 = ItemApiTestUtils.create(CACHE_STRATEGY, new ItemCreateRequest("test1"));
+        ItemResponse item2 = ItemApiTestUtils.create(CACHE_STRATEGY, new ItemCreateRequest("test2"));
+        ItemResponse item3 = ItemApiTestUtils.create(CACHE_STRATEGY, new ItemCreateRequest("test3"));
 
-        ItemResponse read1 = ItemTestUtils.read(CACHE_STRATEGY, item1.itemId());
-        ItemResponse read2 = ItemTestUtils.read(CACHE_STRATEGY, item1.itemId());
+        ItemResponse read1 = ItemApiTestUtils.read(CACHE_STRATEGY, item1.itemId());
+        ItemResponse read2 = ItemApiTestUtils.read(CACHE_STRATEGY, item1.itemId());
 
         System.out.println("read1 = " + read1);
         System.out.println("read2 = " + read2);
